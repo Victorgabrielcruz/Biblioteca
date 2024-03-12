@@ -3,7 +3,31 @@
 
 <div class="container">
     <br>
-
+    {% if status == '0'%}
+        <div class="alert alert-success" role="alert">
+            Cadastro realizado com sucesso
+        </div>
+    {%endif%}
+    {% if status == '1'%}
+        <div class="alert alert-danger" role="alert">
+            Nome e email não podem estar vazios
+        </div>
+    {%endif%}
+    {% if status == '2'%}
+        <div class="alert alert-danger" role="alert">
+            A senha deve ter no minimo 8 caracteres
+        </div>
+    {%endif%}
+    {% if status == '3'%}
+        <div class="alert alert-danger" role="alert">
+            Esse email ja foi cadastrado
+        </div>
+    {%endif%}
+    {% if status == '4'%}
+        <div class="alert alert-danger" role="alert">
+            Ocorreu um erro, tente novamente.
+        </div>
+    {%endif%}
     <div class="row">
 
         <div class="col-md-3">
